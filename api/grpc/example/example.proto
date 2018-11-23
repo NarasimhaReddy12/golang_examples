@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package grpc.example;
+
+import "google/api/annotations.proto";
+
+
+message Information {
+    string description = 1;
+}
