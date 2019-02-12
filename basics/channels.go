@@ -23,4 +23,14 @@ func main() {
 	// we sent above and print it out.
 	msg := <-messages
 	fmt.Println(msg)
+
+	// The zero value of a channel is nil. nil channels are
+	// not of any use and hence the channel has to be defined
+	// using make similar to maps and slices.
+	var a chan int
+	if a == nil {
+		fmt.Println("channel a is nil, going to define it")
+		a = make(chan int)
+		fmt.Printf("Type of a is %T", a)
+	}
 }
